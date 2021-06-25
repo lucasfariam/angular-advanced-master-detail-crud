@@ -72,8 +72,9 @@
 
             </div>
             <div class="form-row d-flex justify-content-evenly">
+                
                 <div class="form-group col-md-2">
-                    <label for="paid">Pago</label>
+                    <label for="paid">Pago</label><br>
                     <div class="btn-group">
                         <label (click)="entryForm.get('paid').setValue(true)" [class.active]="entryForm.get('paid').value == true" class="btn btn-outline-info">Pago</label>
                         <label (click)="entryForm.get('paid').setValue(false)" [class.active]="entryForm.get('paid').value == false" class="btn btn-outline-info">Pendente</label>
