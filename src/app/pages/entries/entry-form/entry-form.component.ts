@@ -62,16 +62,16 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
       }
    }
 
-   get typeOptions(): Array<any>{
-      return Object.entries(Entry.types).map(
-         ([value, text]) => {
-            return {
-               text: text,
-               value: value
-            }
-         }
-      )
-   }
+   // get typeOptions(): Array<any>{
+   //    return Object.entries(Entry.types).map(
+   //      ([value, text]) => {
+   //        return {
+   //          text: text,
+   //          value: value
+   //        }
+   //      }
+   //    )
+   //  }
 
    private loadCategories() {
       this.categoryService.getAll().subscribe(
@@ -92,7 +92,7 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
          id: [null],
          name: [null, Validators.required],
          description: [null],
-         type: ['expense', Validators.required],
+         type: [null, Validators.required],
          amount: [null, Validators.required],
          date: [null, Validators.required],
          paid: [true, Validators.required],

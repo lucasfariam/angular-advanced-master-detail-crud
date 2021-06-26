@@ -1,30 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoruDatabase } from './in-memory-database';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    CommonModule,
-    BrowserModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    ToastrModule.forRoot(),
-    HttpClientInMemoryWebApiModule.forRoot(InMemoruDatabase)
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
