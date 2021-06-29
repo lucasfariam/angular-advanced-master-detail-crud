@@ -1,4 +1,4 @@
-import { BaseResourceModel } from "./base-resource.model";
+import { BaseResourceModel } from "../models/base-resource.model";
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
@@ -11,7 +11,7 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
     constructor(
       protected apiPath: string, 
       protected injector: Injector,
-      protected jsonDataToResourceFn: (jsosData) => T 
+      protected jsonDataToResourceFn: (jsonData) => T 
     ) {
         this.http = injector.get(HttpClient);
     }

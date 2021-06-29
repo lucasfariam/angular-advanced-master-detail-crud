@@ -1,5 +1,5 @@
+import { BaseResourceModel } from "../../../shared/models/base-resource.model";
 import { Category } from "../../categories/shared/caterory.model";
-import { BaseResourceModel } from "../../../shared/base-resource.model";
 
 export class Entry extends BaseResourceModel {
    constructor(
