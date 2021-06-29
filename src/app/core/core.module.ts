@@ -8,17 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    
+    NavbarComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    RouterModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
     ToastrModule.forRoot()
   ],
@@ -26,6 +29,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NavbarComponent
   ]
 })
 export class CoreModule { }
